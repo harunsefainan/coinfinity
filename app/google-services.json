@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1012688631482",
+    "project_id": "cryptotracker-2eda1",
+    "storage_bucket": "cryptotracker-2eda1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1012688631482:android:1372532003dfc06a3a7483",
+        "android_client_info": {
+          "package_name": "com.example.cryptocurrencyapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKoH7r7GgZiDX0awiwyMvh43ZhO1rhUi4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
