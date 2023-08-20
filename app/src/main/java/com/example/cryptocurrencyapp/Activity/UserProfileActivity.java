@@ -4,14 +4,22 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -31,6 +39,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthCredential;
@@ -66,7 +75,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
     private TextInputEditText editTextPasswordCurrent, editTextPasswordNew, editTextPasswordConfirm;
     private TextView textViewAuthenticatedCP;
-    private Button buttonChangePassword, buttonReAuthenticate;
+    private Button buttonChangePassword, buttonReAuthenticate,map;
     private CardView buttonChangePasswordCardView;
     private String userPasswordCurrent;
 
@@ -74,8 +83,10 @@ public class UserProfileActivity extends AppCompatActivity {
     private TextInputEditText editTextUserPassword;
     private TextView textViewAuthenticateDu;
     private String userPasswordDu;
-    private Button buttonReAuthenticateDu, buttonDeleteUser;
+    private Button buttonReAuthenticateDu, buttonDeleteUser,button_ExitUser;
     private CardView buttonDeleteCardView;
+
+    private BottomNavigationView nav;
 
     public UserProfileActivity() {
     }
@@ -85,6 +96,7 @@ public class UserProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userprofile);
 
+        createNotificationChannel();
         //init_screen();
 
         dialog = new Dialog(this);
@@ -152,6 +164,49 @@ public class UserProfileActivity extends AppCompatActivity {
                 deleteAccount();
             }
         });
+
+        Button ExitAccountBtn=(Button) findViewById(R.id.button_ExitUser);
+        ExitAccountBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firebaseAuth.signOut();
+                Intent intent = new Intent(UserProfileActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        Button map=(Button) findViewById(R.id.map);
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UserProfileActivity.this, MapActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+        nav = findViewById(R.id.bottomNavigationView);
+        nav.setSelectedItemId(R.id.nav_user);
+
+        nav.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()){
+                case R.id.nav_home:
+                    startActivity(new Intent(getApplicationContext(),HomeActivity.class));
+                    finish();
+                    return true;
+                case R.id.nav_market:
+                    startActivity(new Intent(getApplicationContext(),CryptoActivity.class));
+                    finish();
+                    return true;
+                case R.id.nav_user:
+                    return true;
+            }
+            return false;
+        });
+
     }
 
 
@@ -418,31 +473,34 @@ public class UserProfileActivity extends AppCompatActivity {
 
 
     //şifre bölümünü göster
-    private void changePassword() {
+    private void changePassword(){
         editTextPasswordNew = findViewById(R.id.editText_change_password_new);
         editTextPasswordCurrent = findViewById(R.id.editText_change_password_current);
-        editTextPasswordConfirm = findViewById(R.id.editText_change_password_new_confirm);
-        textViewAuthenticatedCP = findViewById(R.id.textView_change_password_authenticated);
+        editTextPasswordConfirm = findViewById(R.id.editText_change_password_new_confirm) ;
+        textViewAuthenticatedCP = findViewById(R.id.textView_change_password_authenticated) ;
         buttonReAuthenticate = findViewById(R.id.Button_change_password_authenticate_user);
         buttonChangePassword = findViewById(R.id.ButtonChangePassword);
         buttonChangePasswordCardView = findViewById(R.id.ButtonChangePasswordCardView);
 
+        editTextPasswordNew.setEnabled(false);
+        editTextPasswordConfirm.setEnabled(false);
 
-        if (firebaseUser.equals("")) {
+        if (firebaseUser.equals("")){
             Toast.makeText(this, "Bir sorun var! Kullanıcı ayrıntıları yok.", Toast.LENGTH_SHORT).show();
-        } else {
+        }else {
             reAuthenticatePassword(firebaseUser);
         }
     }
 
     private void reAuthenticatePassword(FirebaseUser firebaseUser) {
+
         buttonReAuthenticate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                userPasswordCurrent = editTextPasswordCurrent.getText().toString().trim();
+                userPasswordCurrent=editTextPasswordCurrent.getText().toString().trim();
                 String checkPassword = "^(?=\\S+$).{6,20}$";
 
-                if (TextUtils.isEmpty(userPasswordCurrent)) {
+                if (TextUtils.isEmpty(userPasswordCurrent)){
                     Toast.makeText(UserProfileActivity.this, "Şifre Gerekli", Toast.LENGTH_SHORT).show();
                     editTextPasswordCurrent.setError("Lütfen geçerli parolanızı girin kimlik doğrulamasını yapın.");
                     editTextPasswordCurrent.requestFocus();
@@ -451,11 +509,11 @@ public class UserProfileActivity extends AppCompatActivity {
                     editTextPasswordCurrent.requestFocus();
                 }
                 progressBar.setVisibility(View.VISIBLE);
-                AuthCredential credential = EmailAuthProvider.getCredential(firebaseUser.getEmail(), userPasswordCurrent);
+                AuthCredential credential=EmailAuthProvider.getCredential(firebaseUser.getEmail(),userPasswordCurrent);
                 firebaseUser.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
+                        if (task.isSuccessful()){
                             progressBar.setVisibility(View.GONE);
                             //mevcut şifre için düzenleme metnini devre dışı bırak / yeni şifre için edittext'i etkinleştirin ve yeni şifreyi onaylayın
                             editTextPasswordCurrent.setEnabled(false);
@@ -465,12 +523,12 @@ public class UserProfileActivity extends AppCompatActivity {
                             buttonReAuthenticate.setEnabled(false);
                             buttonChangePassword.setEnabled(true);
                             //kullanıcının kimliğinin doğrulandığını göster / doğrulama
-                            textViewAuthenticatedCP.setText("Kontrol edildiniz/Onaylandınız" + "Şifrenizi anında değiştirebilirsiniz!");
-                            Toast.makeText(UserProfileActivity.this, "Şifre onaylandı." +
+                            textViewAuthenticatedCP.setText("Kontrol edildiniz/Onaylandınız"+ "Şifrenizi anında değiştirebilirsiniz!");
+                            Toast.makeText(UserProfileActivity.this, "Şifre onaylandı."+
                                     "Yeni şifreyi değiştir.", Toast.LENGTH_SHORT).show();
                             //şifre butonu renk değişimi
                             buttonChangePassword.setBackgroundTintList(ContextCompat.getColorStateList(
-                                    UserProfileActivity.this, R.color.purple_200));
+                                    UserProfileActivity.this,R.color.purple_200));
 
                             buttonChangePassword.setOnClickListener(new View.OnClickListener() {
                                 @Override
@@ -478,10 +536,10 @@ public class UserProfileActivity extends AppCompatActivity {
                                     changePasswordConfirm(firebaseUser);
                                 }
                             });
-                        } else {
+                        }else {
                             try {
                                 throw task.getException();
-                            } catch (Exception e) {
+                            }catch (Exception e){
                                 Toast.makeText(UserProfileActivity.this, "Yanlış şifre.", Toast.LENGTH_SHORT).show();
                             }
                         }
@@ -528,8 +586,28 @@ public class UserProfileActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         Toast.makeText(UserProfileActivity.this, "Şifre değiştirildi.", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(UserProfileActivity.this, UserProfileActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        PendingIntent pendingIntent = PendingIntent.getActivity(UserProfileActivity.this, 0, intent, PendingIntent.FLAG_IMMUTABLE);
+
+                        NotificationCompat.Builder builder = new NotificationCompat.Builder(UserProfileActivity.this, "CHANNEL_ID")
+                                .setContentTitle("Coinfinity")
+                                .setSmallIcon(R.drawable.bitcoin)
+                                .setContentText("Şifreniz güncellendi!")
+                                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                                .setContentIntent(pendingIntent)
+                                .setAutoCancel(true);
+                        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(UserProfileActivity.this);
+
+                        if (ActivityCompat.checkSelfPermission(UserProfileActivity.this, android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                            return;
+                        }
+                        notificationManager.notify(1, builder.build());
+
                         startActivity(intent);
                         finish();
+
+
+
                     } else {
                         try {
                             throw task.getException();
@@ -540,6 +618,15 @@ public class UserProfileActivity extends AppCompatActivity {
                     progressBar.setVisibility(View.GONE);
                 }
             });
+        }
+    }
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("CHANNEL_ID", "name", importance);
+            channel.setDescription("description");
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
         }
     }
 
@@ -710,43 +797,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
     }
 
-    //menu
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.nav_home) {
-            Intent intent = new Intent(UserProfileActivity.this, HomeActivity.class);
-            startActivity(intent);
-            finish();
-            item.setEnabled(false);
-        }
-        if (id == R.id.nav_market) {
-            Intent intent = new Intent(UserProfileActivity.this, CryptoActivity.class);
-            startActivity(intent);
-            finish();
-            item.setEnabled(false);
-        }
-        if (id == R.id.nav_user) {
-            Intent intent = new Intent(UserProfileActivity.this, UserProfileActivity.class);
-            startActivity(intent);
-            finish();
-            item.setEnabled(false);
-        }
-        if (id == R.id.nav_logout) {
-            firebaseAuth.signOut();
-            Intent intent = new Intent(UserProfileActivity.this, MainActivity.class);
-            startActivity(intent);
-            finish();
-            item.setEnabled(false);
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
     //geri basıldığında
     int backPressed = 0;

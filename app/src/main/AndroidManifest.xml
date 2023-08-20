@@ -3,34 +3,44 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_DRM_DEBUG" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="Kripto Para Takipçisi"
+        android:icon="@mipmap/infinite"
+        android:label="Coinfinity"
         android:supportsRtl="true"
         android:theme="@style/Theme.CryptocurrencyApp"
         tools:targetApi="31">
         <activity
-            android:name=".DetailsActivity"
+            android:name=".Activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Deta"
+            android:name=".Activity.MapActivity"
             android:exported="false" />
         <activity
-            android:name=".CryptoDetails"
+            android:name=".Activity.DetailsActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.HomeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:fitsSystemWindows="true"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".Activity.CryptoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:fitsSystemWindows="true"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".Activity.UserProfileActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:fitsSystemWindows="true"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".Activity.LoginActivity"
             android:exported="false" />
@@ -38,7 +48,7 @@
             android:name=".Activity.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.MainActivity"
+            android:name=".Activity.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,6 +56,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDQ4kbheFpqKvu6GB4M6idbdQDFewuluSs" />
     </application>
 
 </manifest>

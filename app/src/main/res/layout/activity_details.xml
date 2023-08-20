@@ -19,16 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/addWatchlistButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:padding="8dp"
-            android:src="@drawable/ic_star_outline"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+
 
         <ImageButton
             android:id="@+id/backStackButton"
@@ -45,12 +36,14 @@
             android:id="@+id/detailSymbolTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/chub"
             android:textColor="@color/white"
             android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/addWatchlistButton"
-            app:layout_constraintStart_toEndOf="@+id/backStackButton"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.521"
             tools:text="BTC" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -71,6 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:textColor="@color/green"
+            android:fontFamily="@font/chub"
             android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/detailChangeImageView"
             app:layout_constraintTop_toBottomOf="@+id/detailPriceTextView"
@@ -82,6 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:textColor="@color/white"
+            android:fontFamily="@font/chub"
             android:textSize="26sp"
             app:layout_constraintStart_toEndOf="@+id/detailImageView"
             app:layout_constraintTop_toTopOf="parent"
@@ -122,6 +117,7 @@
             android:layout_marginTop="8dp"
             android:background="@null"
             android:text="@string/_1m"
+            android:fontFamily="@font/chub"
             android:textAllCaps="false"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
@@ -137,6 +133,7 @@
             android:text="@string/_1w"
             android:textAllCaps="false"
             android:textColor="@color/white"
+            android:fontFamily="@font/chub"
             app:layout_constraintBottom_toBottomOf="@+id/button"
             app:layout_constraintEnd_toStartOf="@+id/button"
             app:layout_constraintHorizontal_bias="0.5"
@@ -152,6 +149,7 @@
             android:textAllCaps="false"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/button1"
+            android:fontFamily="@font/chub"
             app:layout_constraintEnd_toStartOf="@+id/button1"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button3"
@@ -163,6 +161,7 @@
             android:layout_height="36dp"
             android:background="@null"
             android:text="@string/_4h"
+            android:fontFamily="@font/chub"
             android:textAllCaps="false"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/button2"
@@ -176,6 +175,7 @@
             android:layout_width="58dp"
             android:layout_height="36dp"
             android:background="@null"
+            android:fontFamily="@font/chub"
             android:text="@string/_1h"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -192,6 +192,7 @@
             android:background="@null"
             android:text="@string/_15m"
             android:textAllCaps="false"
+            android:fontFamily="@font/chub"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/button4"
             app:layout_constraintEnd_toStartOf="@+id/button4"
@@ -226,8 +227,230 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/detailChart">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
 
-        <androidx.recyclerview.widget.RecyclerView
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:fontFamily="@font/chub"
+                    android:padding="3dp"
+                    android:text="Ad :"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/chub"
+                    android:gravity="end"
+                    android:padding="3dp"
+                    android:text="1.32828234"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="#61FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:fontFamily="@font/chub"
+                    android:padding="3dp"
+                    android:text="Piyasa Değeri :"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/marketcap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/chub"
+                    android:gravity="end"
+                    android:padding="3dp"
+                    android:text="1.32828234"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="#61FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:fontFamily="@font/chub"
+                    android:padding="3dp"
+                    android:text="işlem Hacmi :"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/volume24h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/chub"
+                    android:gravity="end"
+                    android:padding="3dp"
+                    android:text="1.32828234"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="#61FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:fontFamily="@font/chub"
+                    android:padding="3dp"
+                    android:text="Baskınlık :"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/dominance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/chub"
+                    android:gravity="end"
+                    android:padding="3dp"
+                    android:text="1.32828234"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="#61FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:fontFamily="@font/chub"
+                    android:padding="3dp"
+                    android:text="30dk Değişim :"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/percentchange30d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/chub"
+                    android:gravity="end"
+                    android:padding="3dp"
+                    android:text="1.32828234"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="#61FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:fontFamily="@font/chub"
+                    android:padding="3dp"
+                    android:text="Toplam Arz :"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/totalsupply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/chub"
+                    android:gravity="end"
+                    android:padding="3dp"
+                    android:text="1.32828234"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/detailRecyclerView"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -236,7 +459,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

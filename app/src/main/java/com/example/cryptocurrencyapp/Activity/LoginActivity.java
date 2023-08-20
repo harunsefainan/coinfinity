@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
     private static final String FILE_EMAIL = "EmailPassSave";
     EditText Email, Password;
     ProgressBar progressBar;
-    String uid,etName;
+    String uid, etName;
     FirebaseAuth firebaseAuth;
 
     @Override
@@ -48,33 +48,33 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Email=findViewById(R.id.email);
-        Password=findViewById(R.id.password);
-        progressBar=findViewById(R.id.progressBar);
+        Email = findViewById(R.id.email);
+        Password = findViewById(R.id.password);
+        progressBar = findViewById(R.id.progressBar);
 
         //e-postayı ve şifreyi kaydet onay kutusunu tıklayın
-        final CheckBox mCheckBoxRemember=(CheckBox)findViewById(R.id.remember_me);
-        SharedPreferences sharedPreferences=getSharedPreferences(FILE_EMAIL,MODE_PRIVATE);
-        final SharedPreferences.Editor editor=sharedPreferences.edit();
-        String etEmail=sharedPreferences.getString("etEmail","");
-        String etPassword=sharedPreferences.getString("etPassword","");
-        if (sharedPreferences.contains("checked")&& sharedPreferences.getBoolean("checked",false)==true){
+        final CheckBox mCheckBoxRemember = (CheckBox) findViewById(R.id.remember_me);
+        SharedPreferences sharedPreferences = getSharedPreferences(FILE_EMAIL, MODE_PRIVATE);
+        final SharedPreferences.Editor editor = sharedPreferences.edit();
+        String etEmail = sharedPreferences.getString("etEmail", "");
+        String etPassword = sharedPreferences.getString("etPassword", "");
+        if (sharedPreferences.contains("checked") && sharedPreferences.getBoolean("checked", false) == true) {
             mCheckBoxRemember.setChecked(true);
-        }else {
+        } else {
             mCheckBoxRemember.setChecked(false);
         }
 
-        firebaseAuth=FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
 
         //metni göster
         Email.setText(etEmail);
         Password.setText(etPassword);
 
-        TextView nextToRegister=(TextView) findViewById(R.id.nextToRegister);
+        TextView nextToRegister = (TextView) findViewById(R.id.nextToRegister);
         nextToRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(LoginActivity.this,RegisterActivity.class);
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -104,7 +104,7 @@ public class LoginActivity extends AppCompatActivity {
                         Password.requestFocus();
                     } else {
                         progressBar.setVisibility(View.VISIBLE);
-                        loginUser(etName,etEmail,etPassword);
+                        loginUser(etName, etEmail, etPassword);
                     }
                 } else {
                     if (!Patterns.EMAIL_ADDRESS.matcher(etEmail).matches()) {
@@ -118,8 +118,8 @@ public class LoginActivity extends AppCompatActivity {
                         Password.requestFocus();
                     } else {
                         progressBar.setVisibility(View.VISIBLE);
-                        getSharedPreferences(FILE_EMAIL,MODE_PRIVATE).edit().clear().commit();
-                        loginUser(etName,etEmail,etPassword);
+                        getSharedPreferences(FILE_EMAIL, MODE_PRIVATE).edit().clear().commit();
+                        loginUser(etName, etEmail, etPassword);
                     }
                 }
             }
@@ -130,8 +130,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                EditText editText= new EditText(v.getContext());
-                AlertDialog.Builder forgotPasswordDialog=new AlertDialog.Builder(v.getContext());
+                EditText editText = new EditText(v.getContext());
+                AlertDialog.Builder forgotPasswordDialog = new AlertDialog.Builder(v.getContext());
                 forgotPasswordDialog.setTitle("Şifreyi yenile ?");
                 forgotPasswordDialog.setMessage("Alınan sıfırlama bağlantısı için e-postanızı girin.");
                 forgotPasswordDialog.setView(editText);
@@ -139,7 +139,7 @@ public class LoginActivity extends AppCompatActivity {
                 forgotPasswordDialog.setPositiveButton("Evet", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        String Email=editText.getText().toString();
+                        String Email = editText.getText().toString();
                         firebaseAuth.sendPasswordResetEmail(Email).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
@@ -167,9 +167,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-
-    private void loginUser(String etName,String etEmail, String etPassword) {
-        firebaseAuth.signInWithEmailAndPassword(etEmail,etPassword)
+    private void loginUser(String etName, String etEmail, String etPassword) {
+        firebaseAuth.signInWithEmailAndPassword(etEmail, etPassword)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -200,16 +199,16 @@ public class LoginActivity extends AppCompatActivity {
                                 progressBar.setVisibility(View.GONE);
                                 showAlertDialog();
                             }
-                        }else{
+                        } else {
                             try {
                                 throw task.getException();
-                            }catch (FirebaseAuthInvalidUserException e){
+                            } catch (FirebaseAuthInvalidUserException e) {
                                 Email.setError("Kullanıcı adı sistemde mevcut değil.Lütfen tekrar kayıt olunuz.");
                                 Email.requestFocus();
-                            }catch (FirebaseAuthInvalidCredentialsException e){
+                            } catch (FirebaseAuthInvalidCredentialsException e) {
                                 Email.setError("Bazı bilgiler doğru değil lütfen kontrol edin ve tekrar deneyin.");
                                 Email.requestFocus();
-                            }catch (Exception e){
+                            } catch (Exception e) {
                                 Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                             progressBar.setVisibility(View.GONE);
@@ -219,63 +218,65 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void showAlertDialog() {
-        AlertDialog.Builder builder=new AlertDialog.Builder(LoginActivity.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
         builder.setTitle("E-posta doğrulanmadı, lütfen kontrol edin");
         builder.setMessage("Lütfen yeni e-postanızı doğrulayın, e-postanızı doğrulamadan giriş yapamazsınız");
 
         builder.setPositiveButton("E-mail'i doğrula", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Intent intent=new Intent(Intent.ACTION_MAIN);
+                Intent intent = new Intent(Intent.ACTION_MAIN);
                 intent.addCategory(Intent.CATEGORY_APP_EMAIL);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
         });
-        AlertDialog alertDialog=builder.create();
+        AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
 
     private void StoreDataUsingSharedPref(String etEmail, String etPassword) {
-        SharedPreferences.Editor editor= getSharedPreferences(FILE_EMAIL,MODE_PRIVATE).edit();
-        editor.putString("etEmail",etEmail);
-        editor.putString("etPassword",etPassword);
+        SharedPreferences.Editor editor = getSharedPreferences(FILE_EMAIL, MODE_PRIVATE).edit();
+        editor.putString("etEmail", etEmail);
+        editor.putString("etPassword", etPassword);
         editor.apply();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        if(firebaseAuth.getCurrentUser()!=null){
+        if (firebaseAuth.getCurrentUser() != null) {
             Toast.makeText(this, "Giriş yapıldı!", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(LoginActivity.this, HomeActivity.class));
             finish();
-        }else {
+        } else {
             Toast.makeText(this, "Şimdi giriş yapabilirsin!", Toast.LENGTH_SHORT).show();
         }
     }
 
-    int backPressed=0;
+    int backPressed = 0;
+
     @Override
     public void onBackPressed() {
         backPressed++;
-        if (backPressed==1){
-            Intent intent=new Intent(LoginActivity.this,MainActivity.class);
+        if (backPressed == 1) {
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
         }
         super.onBackPressed();
     }
+
     private void init_screen() {
-        final int flags =View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+        final int flags = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         getWindow().getDecorView().setSystemUiVisibility(flags);
 
-        final View view=getWindow().getDecorView();
+        final View view = getWindow().getDecorView();
         view.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
             @Override
             public void onSystemUiVisibilityChange(int visibility) {
-                if ((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN)==0){
+                if ((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0) {
                     view.setSystemUiVisibility(flags);
                 }
             }

@@ -30,29 +30,33 @@
         android:gravity="center|top"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Coinfinity"
+            android:textAlignment="center"
+            android:fontFamily="@font/chub"
+            android:textColor="@color/white"
+            android:textSize="45sp" />
         <ImageView
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:src="@drawable/crypto_show" />
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hoşgeldiniz"
+            android:layout_marginBottom="20dp"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:fontFamily="@font/chub"
-            android:textSize="35sp" />
+            android:textSize="33sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Kripto Para Takipçisi"
-            android:textAlignment="center"
-            android:fontFamily="@font/chub"
-            android:textColor="@color/white"
-            android:textSize="25sp" />
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"

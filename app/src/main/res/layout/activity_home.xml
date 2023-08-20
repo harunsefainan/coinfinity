@@ -8,6 +8,15 @@
     android:background="@drawable/background"
     tools:context=".Activity.HomeActivity">
 
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu" />
+
     <!-- Toolbar-->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -28,6 +37,7 @@
             android:textSize="20sp" />
 
     </androidx.appcompat.widget.Toolbar>
+
 
     <!-- Yükleniyor -->
     <ProgressBar
@@ -62,7 +72,8 @@
             android:gravity="center|top"
             android:orientation="vertical">
 
-            <ImageView
+            <VideoView
+                android:id="@+id/vide_view"
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
                 android:layout_centerHorizontal="true"
@@ -71,7 +82,8 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                app:srcCompat="@drawable/kapak_085409" />
+                />
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -166,7 +178,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="60dp"
         android:elevation="1dp"
         card_view:cardBackgroundColor="#D9440875"
         card_view:cardCornerRadius="20dp">

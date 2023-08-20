@@ -1,13 +1,15 @@
 <resources>
     <string name="app_name">CryptocurrencyApp</string>
-    <string name="eri_im_i_in_kay_t_olabilirsiniz_kripto_uygulamas_burada">Erişim için kayıt olabilirsiniz Kripto uygulaması burada.</string>
+    <string name="eri_im_i_in_kay_t_olabilirsiniz_kripto_uygulamas_burada">Erişim için kayıt olabilirsiniz Coinfinity burada.</string>
     <string name="daha_nce_kay_t_olduysan_z_giri_yapmak_i_in_t_klay_n">Daha önce kayıt olduysanız <u>Giriş yapmak için tıklayın</u></string>
-    <string name="eri_mek_i_in_giri_yapabilirsiniz_kripto_uygulamas_burada">Erişmek için giriş yapabilirsiniz Kripto uygulaması burada.</string>
+    <string name="eri_mek_i_in_giri_yapabilirsiniz_kripto_uygulamas_burada">Erişmek için giriş yapabilirsiniz Coinfinity  burada.</string>
     <string name="hen_z_kay_t_olmad_ysan_z_kay_t_olmak_i_in_t_klay_n">Henüz kayıt olmadıysanız <u>Kayıt olmak için tıklayın</u></string>
-    <string name="_15m">15 dakika</string>
+    <string name="_15m">15 dk</string>
     <string name="_1h">1 saat</string>
     <string name="_4h">4 saat</string>
     <string name="_1d">1 gün</string>
     <string name="_1w">1 hafta</string>
     <string name="_1m">1 ay</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

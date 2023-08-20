@@ -13,9 +13,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.MediaController;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -28,6 +30,8 @@ import com.example.cryptocurrencyapp.Adapter.AdapterCryptoHome;
 import com.example.cryptocurrencyapp.Adapter.AdapterCryptoPercent;
 import com.example.cryptocurrencyapp.Model.ModelCrypto;
 import com.example.cryptocurrencyapp.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
@@ -53,17 +57,25 @@ public class HomeActivity extends AppCompatActivity {
     private AdapterCryptoHome adapterCryptoHome;
     private AdapterCryptoPercent adapterCryptoPercent;
 
+    private BottomNavigationView nav;
+
     LinearLayoutManager linearLayoutManager;
     private ProgressBar progressBar;
     private long backPressedTime;
 
     private TextView tvYukselen,tvDusen;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        VideoView vv=findViewById(R.id.vide_view);
+        vv.setVideoPath("android.resource://"+getPackageName()+"/"+R.raw.crypto);
+        MediaController med=new MediaController(this);
+        vv.setMediaController(med);
+        med.setAnchorView(vv);
+        vv.start();
 
         //init_screen();
 
@@ -90,17 +102,23 @@ public class HomeActivity extends AppCompatActivity {
         yukselen=new ArrayList<>();
         dusen=new ArrayList<>();
 
+        tvYukselen.setBackgroundTintList(ContextCompat.getColorStateList(
+                HomeActivity.this,R.color.black));
+        adapterCryptoPercent=new AdapterCryptoPercent(yukselen);
+        linearLayoutManager=new LinearLayoutManager(HomeActivity.this,LinearLayoutManager.VERTICAL,false);
+        RVPercent.setLayoutManager(linearLayoutManager);
+        RVPercent.setAdapter(adapterCryptoPercent);
+
 
         tvYukselen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 tvYukselen.setBackgroundTintList(ContextCompat.getColorStateList(
                         HomeActivity.this,R.color.black));
-                adapterCryptoPercent=new AdapterCryptoPercent(yukselen,this::onClick);
+                adapterCryptoPercent=new AdapterCryptoPercent(yukselen);
                 linearLayoutManager=new LinearLayoutManager(HomeActivity.this,LinearLayoutManager.VERTICAL,false);
                 RVPercent.setLayoutManager(linearLayoutManager);
                 RVPercent.setAdapter(adapterCryptoPercent);
-                getCurrencyData();
             }
         });
 
@@ -109,21 +127,36 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 tvDusen.setBackgroundTintList(ContextCompat.getColorStateList(
                         HomeActivity.this,R.color.black));
-                adapterCryptoPercent=new AdapterCryptoPercent(dusen,this::onClick);
+                adapterCryptoPercent=new AdapterCryptoPercent(dusen);
                 linearLayoutManager=new LinearLayoutManager(HomeActivity.this,LinearLayoutManager.VERTICAL,false);
                 RVPercent.setLayoutManager(linearLayoutManager);
                 RVPercent.setAdapter(adapterCryptoPercent);
-                getCurrencyData();
             }
         });
-
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        nav=findViewById(R.id.bottomNavigationView);
+        nav.setSelectedItemId(R.id.nav_home);
+
+        nav.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()){
+                case R.id.nav_home:
+                    return true;
+                case R.id.nav_market:
+                    startActivity(new Intent(getApplicationContext(),CryptoActivity.class));
+                    finish();
+                    return true;
+                case R.id.nav_user:
+                    startActivity(new Intent(getApplicationContext(),UserProfileActivity.class));
+                    finish();
+                    return true;
+            }
+            return false;
+        });
+
     }
-
-
 
     private void filterCurrencies(String currency) {
         ArrayList<ModelCrypto> filteredList = new ArrayList<>();
@@ -135,7 +168,72 @@ public class HomeActivity extends AppCompatActivity {
         }
 
     }
+
     private void getCurrencyData() {
+        progressBar.setVisibility(View.VISIBLE);
+        String url = "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/listing?start=1&limit=500";
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                progressBar.setVisibility(View.GONE);
+                try {
+                    JSONObject data = response.getJSONObject("data");
+                    JSONArray dataArray = data.getJSONArray("cryptoCurrencyList");
+
+                    for (int i = 0; i < dataArray.length(); i++) {
+                        JSONObject dataObj = dataArray.getJSONObject(i);
+                        String name = dataObj.getString("name");
+                        String symbol = dataObj.getString("symbol");
+                        String id = dataObj.getString("id");
+                        double totalSupply = dataObj.getDouble("totalSupply");
+
+                        // Döngü kullanarak quotes JSONArray'inin içindeki verileri alın
+                        JSONArray quotesArray = dataObj.getJSONArray("quotes");
+                        for (int j = 0; j < quotesArray.length(); j++) {
+                            JSONObject quoteObj = quotesArray.getJSONObject(j);
+                            double price = quoteObj.getDouble("price");
+                            double percent = quoteObj.getDouble("percentChange24h");
+                            double marketcap = quoteObj.getDouble("marketCap");
+                            double volume24h = quoteObj.getDouble("volume24h");
+                            double dominance = quoteObj.getDouble("dominance");
+                            double percentChange30d = quoteObj.getDouble("percentChange30d");
+                            modelCryptos.add(new ModelCrypto(id, name, symbol, price, percent,marketcap, volume24h, dominance, percentChange30d, totalSupply));
+                            if (percent>0){
+                                yukselen.add(new ModelCrypto(id, name, symbol, price, percent,marketcap, volume24h, dominance, percentChange30d, totalSupply));
+                            }else{
+                                dusen.add(new ModelCrypto(id, name, symbol, price, percent,marketcap, volume24h, dominance, percentChange30d, totalSupply));
+                            }
+                        }
+
+                    }
+
+                    adapterCryptoHome.notifyDataSetChanged();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(HomeActivity.this, "Json verilerini çıkaramadı...", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                progressBar.setVisibility(View.GONE);
+                Toast.makeText(HomeActivity.this, "Veriler alınmıyor.", Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> header = new HashMap<>();
+                header.put("X-CMC_PRO_API_KEY", "9a4c8dcf-2247-41a1-913b-f980c66d1b3c");
+                return header;
+            }
+        };
+        requestQueue.add(jsonObjectRequest);
+    }
+
+    //eski api
+    /*private void getCurrencyData() {
         progressBar.setVisibility(View.VISIBLE);
         String url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest";
         RequestQueue requestQueue = Volley.newRequestQueue(this);
@@ -182,50 +280,13 @@ public class HomeActivity extends AppCompatActivity {
             }
         };
         requestQueue.add(jsonObjectRequest);
-    }
+    }*/
 
     //restart activity
     private void restartApp() {
         Intent intent = new Intent(getApplicationContext(), UserProfileActivity.class);
         startActivity(intent);
         finish();
-    }
-
-    //menu
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.nav_home) {
-            Intent intent = new Intent(HomeActivity.this, HomeActivity.class);
-            startActivity(intent);
-            finish();
-            item.setEnabled(false);
-        }
-        if (id == R.id.nav_market) {
-            Intent intent = new Intent(HomeActivity.this, CryptoActivity.class);
-            startActivity(intent);
-            finish();
-            item.setEnabled(false);
-        }
-        if (id == R.id.nav_user) {
-            Intent intent = new Intent(HomeActivity.this, UserProfileActivity.class);
-            startActivity(intent);
-            finish();
-            item.setEnabled(false);
-        }
-        if (id == R.id.nav_logout) {
-            firebaseAuth.signOut();
-            Intent intent = new Intent(HomeActivity.this, MainActivity.class);
-            startActivity(intent);
-            finish();
-            item.setEnabled(false);
-        }
-        return super.onOptionsItemSelected(item);
     }
 
 
@@ -256,5 +317,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }
 

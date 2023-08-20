@@ -25,17 +25,21 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.cryptocurrencyapp.Adapter.AdapterCrypto;
 import com.example.cryptocurrencyapp.Model.ModelCrypto;
 import com.example.cryptocurrencyapp.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -49,6 +53,7 @@ public class CryptoActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     FirebaseAuth firebaseAuth;
 
+    BottomNavigationView nav;
 
     private long backPressedTime;
 
@@ -71,6 +76,7 @@ public class CryptoActivity extends AppCompatActivity {
         currenciesRV.setAdapter(adapterCrypto);
         getCurrencyData();
 
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -91,6 +97,35 @@ public class CryptoActivity extends AppCompatActivity {
             }
         });
 
+
+        adapterCrypto.setOnCoinClickListener(coin -> {
+            Intent intent = new Intent(getApplicationContext(), DetailsActivity.class);
+            intent.putExtra("coin", coin);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            getApplicationContext().startActivity(intent);
+        });
+
+
+        nav=findViewById(R.id.bottomNavigationView);
+        nav.setSelectedItemId(R.id.nav_market);
+
+        nav.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()){
+                case R.id.nav_home:
+                    startActivity(new Intent(getApplicationContext(),HomeActivity.class));
+                    finish();
+                    return true;
+                case R.id.nav_market:
+                    return true;
+                case R.id.nav_user:
+                    startActivity(new Intent(getApplicationContext(),UserProfileActivity.class));
+                    finish();
+                    return true;
+            }
+            return false;
+        });
+
+
     }
 
     private void filterCurrencies(String currency) {
@@ -98,8 +133,7 @@ public class CryptoActivity extends AppCompatActivity {
         for (ModelCrypto item : modelCryptos) {
             if (item.getName().toLowerCase().contains(currency.toLowerCase())) {
                 filteredList.add(item);
-            }
-            else if (item.getSymbol().toLowerCase().contains(currency.toLowerCase())) {
+            } else if (item.getSymbol().toLowerCase().contains(currency.toLowerCase())) {
                 filteredList.add(item);
             }
             adapterCrypto.filterList(filteredList);
@@ -107,9 +141,72 @@ public class CryptoActivity extends AppCompatActivity {
 
     }
 
+    //data çektiğimiz yer
     private void getCurrencyData() {
         progressBar.setVisibility(View.VISIBLE);
+        String url = "https://api.coinmarketcap.com/data-api/v3/cryptocurrency/listing?start=1&limit=500";
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                progressBar.setVisibility(View.GONE);
+                try {
+                    JSONObject data = response.getJSONObject("data");
+                    JSONArray dataArray = data.getJSONArray("cryptoCurrencyList");
+
+                    for (int i = 0; i < dataArray.length(); i++) {
+                        JSONObject dataObj = dataArray.getJSONObject(i);
+                        String name = dataObj.getString("name");
+                        String symbol = dataObj.getString("symbol");
+                        String id = dataObj.getString("id");
+                        double totalSupply = dataObj.getDouble("totalSupply");
+
+                        // Döngü kullanarak quotes JSONArray'inin içindeki verileri alın
+                        JSONArray quotesArray = dataObj.getJSONArray("quotes");
+                        for (int j = 0; j < quotesArray.length(); j++) {
+                            JSONObject quoteObj = quotesArray.getJSONObject(j);
+                            double price = quoteObj.getDouble("price");
+                            double percent=quoteObj.getDouble("percentChange24h");
+                            double marketcap = quoteObj.getDouble("marketCap");
+                            double volume24h = quoteObj.getDouble("volume24h");
+                            double dominance = quoteObj.getDouble("dominance");
+                            double percentChange30d = quoteObj.getDouble("percentChange30d");
+                            modelCryptos.add(new ModelCrypto(id, name, symbol, price, percent,marketcap, volume24h, dominance, percentChange30d, totalSupply));
+                        }
+                    }
+
+                    adapterCrypto.notifyDataSetChanged();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(CryptoActivity.this, "Json verilerini çıkaramadı...", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                progressBar.setVisibility(View.GONE);
+                Toast.makeText(CryptoActivity.this, "Veriler alınmıyor.", Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> header = new HashMap<>();
+                header.put("start&limit", "1&500");
+                return header;
+            }
+        };
+
+        requestQueue.add(jsonObjectRequest);
+    }
+
+
+    //eski api
+    /*private void getCurrencyData() {
+        progressBar.setVisibility(View.VISIBLE);
         String url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest";
+
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
@@ -126,7 +223,7 @@ public class CryptoActivity extends AppCompatActivity {
                         JSONObject USD = quote.getJSONObject("USD");
                         double price = USD.getDouble("price");
                         double percent = USD.getDouble("percent_change_24h");
-                        modelCryptos.add(new ModelCrypto(id, name, symbol, price,percent));
+                        modelCryptos.add(new ModelCrypto(id, name, symbol, price, percent));
                     }
                     adapterCrypto.notifyDataSetChanged();
                 } catch (JSONException e) {
@@ -149,7 +246,7 @@ public class CryptoActivity extends AppCompatActivity {
             }
         };
         requestQueue.add(jsonObjectRequest);
-    }
+    }*/
 
 
     private void init_screen() {
@@ -168,43 +265,6 @@ public class CryptoActivity extends AppCompatActivity {
         });
     }
 
-    //menu
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.nav_home) {
-            Intent intent = new Intent(CryptoActivity.this, HomeActivity.class);
-            startActivity(intent);
-            finish();
-            item.setEnabled(false);
-        }
-        if (id == R.id.nav_market) {
-            Intent intent = new Intent(CryptoActivity.this, CryptoActivity.class);
-            startActivity(intent);
-            finish();
-            item.setEnabled(false);
-        }
-        if (id == R.id.nav_user) {
-            Intent intent = new Intent(CryptoActivity.this, UserProfileActivity.class);
-            startActivity(intent);
-            finish();
-            item.setEnabled(false);
-        }
-        if (id == R.id.nav_logout) {
-            firebaseAuth.signOut();
-            Intent intent = new Intent(CryptoActivity.this, MainActivity.class);
-            startActivity(intent);
-            finish();
-            item.setEnabled(false);
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
 
     //geri basıldığında
@@ -218,4 +278,6 @@ public class CryptoActivity extends AppCompatActivity {
         }
         super.onBackPressed();
     }
+
+
 }

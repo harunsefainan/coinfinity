@@ -27,9 +27,8 @@ public class AdapterCryptoPercent extends RecyclerView.Adapter<AdapterCryptoPerc
     HomeActivity homeActivity;
     private static DecimalFormat df2 = new DecimalFormat("#.####");
 
-    public AdapterCryptoPercent(ArrayList<ModelCrypto> modelCryptos, View.OnClickListener context) {
+    public AdapterCryptoPercent(ArrayList<ModelCrypto> modelCryptos) {
         this.modelCryptos = modelCryptos;
-        this.onClickListener = onClickListener;
 
     }
 
@@ -52,7 +51,7 @@ public class AdapterCryptoPercent extends RecyclerView.Adapter<AdapterCryptoPerc
         ModelCrypto modelCrypto = modelCryptos.get(position);
         holder.currencyNameTv.setText(modelCrypto.getName());
         holder.symbolTv.setText(modelCrypto.getSymbol());
-        holder.percentTv.setText(df2.format(modelCrypto.getPercent()));
+        holder.percentTv.setText(df2.format(modelCrypto.getPercent())+" %");
         holder.rateTv.setText("$ " + df2.format(modelCrypto.getPrice()));
 
         Glide.with(holder.image).load(
@@ -63,13 +62,12 @@ public class AdapterCryptoPercent extends RecyclerView.Adapter<AdapterCryptoPerc
                 "https://s3.coinmarketcap.com/generated/sparklines/web/7d/usd/" + modelCrypto.getId() + ".png"
         ).into(holder.image2);
 
-        /*if (modelCrypto.getPercent()>0){
-            holder.percentTv.setBackgroundTintList(ContextCompat.getColorStateList(
-                    homeActivity,R.color.green));
+        if (modelCrypto.getPercent()>0){
+            holder.percentTv.setTextColor(ContextCompat.getColor(holder.percentTv.getContext(), R.color.green));
         }else {
-            holder.percentTv.setBackgroundTintList(ContextCompat.getColorStateList(
-                    homeActivity,R.color.red));
-        }*/
+            holder.percentTv.setTextColor(ContextCompat.getColor(holder.percentTv.getContext(), R.color.red));
+        }
+
 
 
 
