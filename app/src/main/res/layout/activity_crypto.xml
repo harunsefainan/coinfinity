@@ -35,7 +35,8 @@
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/MyToolbarStyle"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        app:titleTextColor="@color/white">
 
         <TextView
             android:id="@+id/toolbar_title"
