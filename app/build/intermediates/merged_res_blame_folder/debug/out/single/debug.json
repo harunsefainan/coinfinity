@@ -1,0 +1,498 @@
+[
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_ic_user.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\ic_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxxhdpi_btngetstarted.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxxhdpi\\btngetstarted.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\mipmap-anydpi-v33_ic_launcher.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\mipmap-anydpi-v33\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-hdpi_crypto_show.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-hdpi\\crypto_show.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-ldpi_edittextbox.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-ldpi\\edittextbox.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_bg_round.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\bg_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_arkaplan.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\arkaplan.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_circle_top_splash.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\circle_top_splash.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_ic_back_stack.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\ic_back_stack.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxhdpi_crypto_show.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxhdpi\\crypto_show.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\font_chur.ttf.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\font\\chur.ttf"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\layout_activity_crypto.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\layout\\activity_crypto.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-ldpi_btngetstarted.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-ldpi\\btngetstarted.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-mdpi_background.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-mdpi\\background.png"
+    },
+    {
+        "merged": "com.example.cryptocurrencyapp-merged_res-55:/layout_activity_crypto.xml.flat",
+        "source": "com.example.cryptocurrencyapp-main-57:/layout/activity_crypto.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-hdpi_background.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-hdpi\\background.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-hdpi_edittextbox.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-hdpi\\edittextbox.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\layout_activity_watchlist.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\layout\\activity_watchlist.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xhdpi_background.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xhdpi\\background.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-mdpi_btn_login.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-mdpi\\btn_login.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\layout_activity_map.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\layout\\activity_map.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xhdpi_btn_register.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xhdpi\\btn_register.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxhdpi_btngetstarted.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxhdpi\\btngetstarted.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xhdpi_card_view_register.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xhdpi\\card_view_register.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-ldpi_card_view.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-ldpi\\card_view.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_show_password.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\show_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\layout_activity_userprofile.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\layout\\activity_userprofile.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxxhdpi_btn_register.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxxhdpi\\btn_register.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_active_button.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\active_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxhdpi_card_view.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxhdpi\\card_view.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxhdpi_background.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxhdpi\\background.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxhdpi_edittextbox.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxhdpi\\edittextbox.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-mdpi_edittextbox.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-mdpi\\edittextbox.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-ldpi_btn_login.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-ldpi\\btn_login.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_bitcoin.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\bitcoin.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-mdpi_ic_visilbity_off.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-mdpi\\ic_visilbity_off.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-hdpi_btngetstarted.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-hdpi\\btngetstarted.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_ic_caret_up.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\ic_caret_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxhdpi_ic_visilbity.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxhdpi\\ic_visilbity.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-anydpi_ic_search.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-anydpi\\ic_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-hdpi_btn_register.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-hdpi\\btn_register.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-hdpi_card_view_register.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-hdpi\\card_view_register.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxxhdpi_card_view.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxxhdpi\\card_view.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\layout_crypto_rv_item.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\layout\\crypto_rv_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_ic_caret_down.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\ic_caret_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xhdpi_ic_visilbity.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xhdpi\\ic_visilbity.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_bottom_btn3.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\bottom_btn3.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_ic_stats.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\ic_stats.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-ldpi_background.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-ldpi\\background.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\font_chub.ttf.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\font\\chub.ttf"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xhdpi_crypto_show.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xhdpi\\crypto_show.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xhdpi_card_view.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xhdpi\\card_view.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxhdpi_btn_login.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxhdpi\\btn_login.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxxhdpi_edittextbox.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxxhdpi\\edittextbox.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_ic_star.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\ic_star.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_kapak_085409.webp.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\kapak_085409.webp"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-mdpi_card_view_register.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-mdpi\\card_view_register.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxhdpi_ic_visilbity_off.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxhdpi\\ic_visilbity_off.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-anydpi_ic_visilbity_off.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-anydpi\\ic_visilbity_off.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_banner.jpg.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\banner.jpg"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\layout_activity_details.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\layout\\activity_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_ic_home.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\ic_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_bottom_btn1.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\bottom_btn1.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\menu_bottom_navigation_menu.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\menu\\bottom_navigation_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\mipmap-hdpi_infinite.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\mipmap-hdpi\\infinite.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xhdpi_ic_visilbity_off.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xhdpi\\ic_visilbity_off.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-mdpi_ic_search.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-mdpi\\ic_search.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxxhdpi_crypto_show.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxxhdpi\\crypto_show.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\layout_crypto_percent_item.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\layout\\crypto_percent_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xhdpi_btngetstarted.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xhdpi\\btngetstarted.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\layout_edit_layout_dialog.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\layout\\edit_layout_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-hdpi_card_view.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-hdpi\\card_view.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-mdpi_btngetstarted.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-mdpi\\btngetstarted.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-hdpi_ic_visilbity_off.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-hdpi\\ic_visilbity_off.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_spinner.gif.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\spinner.gif"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-mdpi_ic_visilbity.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-mdpi\\ic_visilbity.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_bottom_btn2.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\bottom_btn2.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_ic_bookmark.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\ic_bookmark.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xhdpi_ic_search.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xhdpi\\ic_search.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxhdpi_ic_search.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxhdpi\\ic_search.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\mipmap-hdpi_infinity.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\mipmap-hdpi\\infinity.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xhdpi_edittextbox.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xhdpi\\edittextbox.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-mdpi_card_view.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-mdpi\\card_view.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xhdpi_btn_login.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xhdpi\\btn_login.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_ic_star_outline.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\ic_star_outline.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-hdpi_btn_login.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-hdpi\\btn_login.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxhdpi_card_view_register.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxhdpi\\card_view_register.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_intro_button.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\intro_button.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxxhdpi_card_view_register.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxxhdpi\\card_view_register.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_detail_content_bg.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\detail_content_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxxhdpi_btn_login.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxxhdpi\\btn_login.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable_credit.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable\\credit.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-hdpi_ic_visilbity.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-hdpi\\ic_visilbity.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-mdpi_crypto_show.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-mdpi\\crypto_show.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-ldpi_btn_register.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-ldpi\\btn_register.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-anydpi_ic_visilbity.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-anydpi\\ic_visilbity.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-ldpi_crypto_show.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-ldpi\\crypto_show.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-xxhdpi_btn_register.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-xxhdpi\\btn_register.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\layout_activity_splash_screen.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\raw_crypto.mp4.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\raw\\crypto.mp4"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\mipmap-hdpi_images.jpeg.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\mipmap-hdpi\\images.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-ldpi_card_view_register.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-ldpi\\card_view_register.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\drawable-mdpi_btn_register.png.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\drawable-mdpi\\btn_register.png"
+    },
+    {
+        "merged": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-merged_res-55:\\layout_crypto_home_item.xml.flat",
+        "source": "C:\\Users\\sivas\\.gradle\\daemon\\7.5\\com.example.cryptocurrencyapp-main-57:\\layout\\crypto_home_item.xml"
+    }
+]

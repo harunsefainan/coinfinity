@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gcm_defaultSenderId" translatable="false">1012688631482</string>
+    <string name="google_api_key" translatable="false">AIzaSyBKoH7r7GgZiDX0awiwyMvh43ZhO1rhUi4</string>
+    <string name="google_app_id" translatable="false">1:1012688631482:android:1372532003dfc06a3a7483</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBKoH7r7GgZiDX0awiwyMvh43ZhO1rhUi4</string>
+    <string name="google_storage_bucket" translatable="false">cryptotracker-2eda1.appspot.com</string>
+    <string name="project_id" translatable="false">cryptotracker-2eda1</string>
+</resources>
